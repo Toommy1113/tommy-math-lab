@@ -1,0 +1,141 @@
+:root {
+  --bg:#f7f8f4;
+  --paper:#fff;
+  --ink:#263b35;
+  --text:#44524c;
+  --muted:#869087;
+  --green:#426d57;
+  --light:#eaf0e7;
+  --line:#e1e6dd;
+  --orange:#b08b52;
+  --serif:"Songti SC","Noto Serif CJK SC","SimSun",serif
+}
+* {
+  box-sizing:border-box
+}
+html {
+  scroll-behavior:smooth;
+  scroll-padding-top:95px
+}
+body {
+  margin:0;
+  color:var(--text);
+  background:var(--bg);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  font-size:14px;
+  line-height:1.8
+}
+button,a,input {
+  font:inherit
+}
+button {
+  cursor:pointer
+}
+a {
+  color:inherit;
+  text-decoration:none
+}
+button {
+  color:inherit
+}
+button:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible {
+  outline:3px solid #83a38a;
+  outline-offset:4px
+}
+button:disabled {
+  cursor:default;
+  opacity:.38
+}
+button,a,summary {
+  touch-action:manipulation
+}
+h1,h2,h3,p {
+  margin:0
+}
+h1,h2,h3 {
+  color:var(--ink)
+}
+.skip {
+  position:fixed;
+  top:-80px;
+  left:16px;
+  z-index:100;
+  background:white;
+  padding:10px
+}
+.skip:focus {
+  top:8px
+}
+.topbar {
+  height:76px;
+  border-bottom:1px solid var(--line);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 36px;
+  background:#fbfcf9;
+  position:sticky;
+  top:0;
+  z-index:20
+}
+.brand {
+  display:flex;
+  align-items:center;
+  gap:11px;
+  font-size:18px;
+  letter-spacing:-.5px
+}
+.brand b {
+  font-weight:650
+}
+.brand-icon {
+  height:36px;
+  width:36px;
+  border-radius:11px;
+  display:grid;
+  place-items:center;
+  background:var(--ink);
+  color:#f5f6ed;
+  font-family:Georgia,serif;
+  font-size:27px;
+  line-height:1
+}
+.top-meta {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:12px;
+  color:#768176
+}
+.tiny-dot,.active-dot {
+  width:6px;
+  height:6px;
+  background:#78977b;
+  border-radius:50%;
+  display:inline-block
+}
+.version {
+  border:1px solid var(--line);
+  border-radius:6px;
+  margin-left:18px;
+  padding:3px 10px;
+  font-size:11px
+}
+.shell {
+  max-width:1570px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:210px minmax(0,1fr) 300px;
+  gap:38px;
+  padding:36px 34px 0
+}
+.sidebar {
+  position:sticky;
+  top:111px;
+  height:calc(100vh - 125px);
+  max-height:840px;
+  display:flex;
+  flex-direction:column;
+  border-right:1px solid var(--line);
+  padding-right:22px
+}
